@@ -5,7 +5,7 @@ class StaticPagesControllerTest < ActionController::TestCase
   def setup
     @base_title = "Ruby on Rails Tutorial Sample App"
   end
-  
+  #Change all instances of "Ruby on Rails Tutorial Sample App" to #{@base_title}
   test "should get home" do
     get :home
     assert_response :success
