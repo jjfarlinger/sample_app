@@ -1,0 +1,15 @@
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      <!-- pluralize returns pluralized version of the "error" argument.
+        So if there is one error, it will display "The form contains 1 error", or if multiple errors,
+        it will display "The form contains 4 errors". -->
+      The form contains <%= pluralize(@user.errors.count, "error") %>.
+    </div>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
