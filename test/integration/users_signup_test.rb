@@ -22,7 +22,8 @@ end
                                             password_confirmation: "password" }
   end
   assert_template 'users/show'
-  assert_not flash.FILL_IN
+  assert is_logged_in?
+  #  assert_not flash.FILL_IN  code from exercises.
 end
   # test "the truth" do
   #   assert true
